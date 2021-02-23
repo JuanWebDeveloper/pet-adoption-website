@@ -1,0 +1,185 @@
+/*===========================
+<|-About Us Styles        -|>
+===========================*/
+.aboutUs {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.aboutUs .contentAboutUs {
+    display: flex;
+    position: relative;
+    width: 90%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    left: 5%;
+}
+
+.aboutUs .contentAboutUs .dogsImg {
+    position: relative;
+    width: 35%;
+    height: 400px;
+    margin-right: 30px;
+}
+
+.aboutUs .contentAboutUs .dogsImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUs .contentAboutUs .text {
+    position: relative;
+    width: 60%;
+}
+
+.aboutUs .contentAboutUs .text p {
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+}
+
+.aboutUs .contentAboutUs .text p br {
+    margin-bottom: 10px;
+}
+
+/*===========================
+<|-Social Networks Styles -|>
+===========================*/
+.aboutUs .socialNetworks {
+    position: relative;
+    width: 70%;
+    margin-top: 50px;
+    left: 15%;
+}
+
+.aboutUs .socialNetworks .containerNetworks {
+    display: flex;
+	position: relative;
+	width: 100%;
+    height: 10%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.aboutUs .socialNetworks .containerNetworks a {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    background: #fff;
+    transition: .3s all ease-in-out;
+}
+
+.aboutUs .socialNetworks .containerNetworks a:hover {
+    transform: scale(1.1);
+}
+
+.aboutUs .socialNetworks .containerNetworks a::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.aboutUs .socialNetworks .containerNetworks a i {
+    position: absolute;
+    cursor: pointer;
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s all ease-in-out;
+}
+
+.aboutUs .socialNetworks .containerNetworks a:hover::before {
+    box-shadow: inset -4px -4px 20px 0 #fff,
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+.aboutUs .socialNetworks .containerNetworks a:hover i {
+    font-size: 35px;
+}
+
+.aboutUs .socialNetworks .containerNetworks a:nth-child(1) i {
+    color: #3b5998;
+}
+
+.aboutUs .socialNetworks .containerNetworks a:nth-child(2) i {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.aboutUs .socialNetworks .containerNetworks a:nth-child(3) i {
+    color: #00acee;
+}
+
+.aboutUs .socialNetworks .containerNetworks a:nth-child(4) i {
+    color: #0e76a8;
+}
+
+.aboutUs .socialNetworks .containerNetworks a:nth-child(5) i {
+    color: #211F1F;
+}
+
+/*====================================================================
+<|-Styles For Responsive Design                                    -|>
+====================================================================*/
+/*====================================================================
+<|-Medium desktop or horizontal tablet (MD we review at 1024px)    -|>
+====================================================================*/
+@media screen and (max-width:1199px){
+    .aboutUs .contentAboutUs .dogsImg {
+        height: 450px;
+    }
+}
+/*====================================================================
+<|-Small desktop or vertical tablet (SM we review at 768px)        -|>
+====================================================================*/
+@media screen and (max-width: 980px){
+    .aboutUs .contentAboutUs .dogsImg {
+        width: 90%;
+        height: 300px;
+        left: 5%;
+        margin-right: 0px;
+        order: 2;
+    }
+
+    .aboutUs .contentAboutUs .text {
+        width: 90%;
+        left: 5%;
+        order: 1;
+    }
+    
+}
+/*====================================================================
+<|-Mobile (XS we review in 320px)                                  -|>
+====================================================================*/
+@media screen and (max-width: 600px){
+    /*==============================
+    |-Social Media styles          |
+    ===============================*/
+    .aboutUs .socialNetworks .containerNetworks a {
+        height: 50px;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .aboutUs .socialNetworks .containerNetworks a i{
+        font-size: 25px;
+    }
+    
+    .aboutUs .socialNetworks .containerNetworks a:hover i{
+        font-size: 20px;
+    }
+}

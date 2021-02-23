@@ -1,0 +1,209 @@
+/*===========================
+<|-Footer Styles          -|>
+===========================*/
+footer {
+    position: relative;
+    width: 100%;
+    box-shadow: 5px 0px 10px 10px rgba(28, 115, 228, .5);
+    background: #f2f2f2;
+    margin-top: 100px;
+}
+
+footer .contentFooter {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    left: 5%;
+}
+
+footer .contentFooter .logoFooter {
+    position: relative;
+    width: 20%;
+    height: 150px;
+    top: 30px;
+    left: 40%;
+}
+
+footer .contentFooter .logoFooter img {
+    width: 100%;
+    height: 100%;
+}
+
+/*===========================
+<|-Social Networks Styles -|>
+===========================*/
+
+footer .socialNetworks {
+    position: relative;
+    width: 70%;
+    margin-top: 50px;
+    left: 15%;
+}
+
+footer .socialNetworks h2 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 600;
+    color: #1c73e4;
+}
+
+footer .socialNetworks .containerNetworks {
+    display: flex;
+	position: relative;
+	width: 100%;
+    height: 10%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer .socialNetworks .containerNetworks a {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    background: #fff;
+    transition: .3s all ease-in-out;
+}
+
+footer .socialNetworks .containerNetworks a:hover {
+    transform: scale(1.1);
+}
+
+footer .socialNetworks .containerNetworks a::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer .socialNetworks .containerNetworks a i {
+    position: absolute;
+    cursor: pointer;
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s all ease-in-out;
+}
+
+footer .socialNetworks .containerNetworks a:hover::before {
+    box-shadow: inset -4px -4px 20px 0 #fff,
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+footer .socialNetworks .containerNetworks a:hover i {
+    font-size: 35px;
+}
+
+footer .socialNetworks .containerNetworks a:nth-child(1) i {
+    color: #3b5998;
+}
+
+footer .socialNetworks .containerNetworks a:nth-child(2) i {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer .socialNetworks .containerNetworks a:nth-child(3) i {
+    color: #00acee;
+}
+
+footer .socialNetworks .containerNetworks a:nth-child(4) i {
+    color: #0e76a8;
+}
+
+footer .socialNetworks .containerNetworks a:nth-child(5) i {
+    color: #211F1F;
+}
+
+/*===========================
+<|-Copyright Styles        -|>
+===========================*/
+footer .copy {
+    position: relative;
+    width: 90%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    padding: 30px 0;
+    left: 5%;
+    color: #222;
+}
+
+footer .copy a {
+    color: #1c73e4;
+}
+
+/*====================================================================
+<|-Styles For Responsive Design                                    -|>
+====================================================================*/
+/*====================================================================
+<|-Medium desktop or horizontal tablet (MD we review at 1024px)    -|>
+====================================================================*/
+@media screen and (max-width:1199px){
+    footer .copy {
+        font-size: 22px;
+    }
+
+}
+/*====================================================================
+<|-Small desktop or vertical tablet (SM we review at 768px)        -|>
+====================================================================*/
+@media screen and (max-width: 980px){
+    footer {
+        margin-top: 600px;
+    }
+
+    footer .copy {
+        font-size: 17px;
+    }
+}
+/*====================================================================
+<|-Mobile (XS we review in 320px)                                  -|>
+====================================================================*/
+@media screen and (max-width: 600px){
+    footer {
+        margin-top: 750px;
+    }
+
+    footer .contentFooter .logoFooter {
+        width: 50%;
+        left: 25%;
+    }
+
+    footer .socialNetworks h2 {
+        font-size: 20px;
+    }
+
+    footer .socialNetworks .containerNetworks a {
+        height: 50px;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    footer .socialNetworks .containerNetworks a i{
+        font-size: 25px;
+    }
+    
+    footer .socialNetworks .containerNetworks a:hover i{
+        font-size: 20px;
+    }
+
+    footer .copy {
+        font-size: 20px;
+    }
+
+    footer .copy a {
+        display: block;
+    }
+}

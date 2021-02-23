@@ -1,0 +1,293 @@
+/*===========================
+<|-Header Styles          -|>
+===========================*/
+header {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
+
+header .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: url(../images/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+header .content::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: -1;
+}
+
+header .content .contentContainer {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .content .contentContainer h1 {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: capitalize;
+    color: #1c73e4;
+}
+
+header .content .contentContainer p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 30px;
+    color: #C8CDD0;
+}
+
+header .content .contentContainer a {
+	position: relative;
+	border-radius: 15px;
+	font-size: 1.563rem;
+    font-weight: 600;
+    padding: 15px 15px;
+	text-align: center;
+	top: 23%;
+	translate: (-50%, 0);
+	background: #1c73e4;
+    color: #C8CDD0;
+	transition: .5s all ease-in-out;
+	z-index: 1;
+}
+
+header .content .contentContainer a span {
+    transition: .5s all ease-in-out;
+}
+
+header .content .contentContainer a:hover span {
+    font-size: 1.25rem;
+}
+
+header .content .contentContainer a:hover{
+	box-shadow: inset -4px -4px 20px 0 #1c73e4,
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+/*===========================
+<|-Navigation Menu Styles -|>
+===========================*/
+header nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: all .5s ease-in-out;
+    z-index: 100;
+}
+
+header nav.navFixed {
+	box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    background: #fff;
+}
+
+header nav.toShow {
+    opacity: 0;
+}
+
+header nav .bars {
+    display: none;
+}
+
+header nav .logoContainer {
+    position: relative;
+    width: 120px;
+    height: 55px;
+    top: 5px;
+    left: 5%;
+}
+
+header nav ul {
+    position: relative;
+    right: 5%;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0px 25px;
+    margin-top: 7px;
+}
+
+header nav ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    opacity: 1;
+    color: #ccc;
+    transition: all .5s ease-in-out;
+}
+
+header nav ul li a.textFixed {
+    color: #222;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    box-shadow: inset 0 -2px 0 #1c73e4;
+    opacity: 1;
+}
+
+/*====================================================================
+<|-Styles For Responsive Design                                    -|>
+====================================================================*/
+/*====================================================================
+<|-Medium desktop or horizontal tablet (MD we review at 1024px)    -|>
+====================================================================*/
+@media screen and (max-width:1199px){
+    header {
+        height: 70vh;
+    }
+
+    header nav ul li {
+        padding: 0px 15px;
+    }
+}
+
+/*====================================================================
+<|-Small desktop or vertical tablet (SM we review at 768px)        -|>
+====================================================================*/
+@media screen and (max-width: 980px){
+    header .content .contentContainer {
+        top: 60%;
+    }
+    
+    header .content .contentContainer h1 {
+        font-size: 30px;
+    }
+
+    header .content .contentContainer a {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    /*<|-Responsive Navigation Menu Styles-|>*/    
+    header nav .bars {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        width: 5%;
+        height: 50px;
+        top: 10px;
+        left: 90%;
+        z-index: 101;
+    }
+
+    header nav .bars label #line1, #line2, #line3 {
+        cursor: pointer;
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 10px;
+        border-radius: 5px;
+        background: #1c73e4;
+        transition: .5s all ease-in-out;
+    }
+
+    header nav .bars label #line1 {
+        top: 15px;
+        margin-bottom: 15px;
+    }
+
+    header nav .bars label #line2 {
+        top: 0px;
+    }
+
+    header nav .bars label #line3 {
+        top: 30px;
+    }
+
+    header nav .bars #btnBars {
+        display: none;
+    }
+
+    header nav .bars #btnBars:checked ~ label #line1 {
+        transform: rotate(140deg);
+        top: 15px;
+    }
+
+    header nav .bars #btnBars:checked ~ label #line2 {
+        opacity: 0;
+    }
+
+    header nav .bars #btnBars:checked ~ label #line3 {
+        transform: rotate(-140deg);
+        top: 15px;
+    }
+    
+    header nav ul {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        border-top: 5px solid #1c73e4;
+        right: 100%;
+        top: 50px;
+        opacity: 0;
+        background: #FFF;
+        transition: 1s all ease-in-out;
+    }
+    
+    .navbarResponsive {
+        right: 0;
+        opacity: 1;
+    }
+    
+    header nav ul li {
+        padding: 15px 0px;
+        margin-top: 0;
+    }
+    
+    header nav ul li a {
+        font-size: 25px;
+        color: #222;
+    }
+
+    header nav ul li a.active {
+        box-shadow: none;
+    }
+}
+/*====================================================================
+<|-Mobile (XS we review in 320px)                                  -|>
+====================================================================*/
+@media screen and (max-width: 600px){
+    header .content .contentContainer h1 {
+        font-size: 18px;
+    }
+
+    header .content .contentContainer a {
+        font-size: 17px;
+        padding: 10px 10px;
+    }
+
+    /*<|-Responsive Navigation Menu Styles-|>*/
+    header nav .bars {
+        left: 80%;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+}
+

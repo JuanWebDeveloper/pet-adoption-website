@@ -1,0 +1,76 @@
+/*===========================
+<|-Global Styles          -|>
+===========================*/
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #f8f8f8;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+/*===========================
+<|-Global Titles Styles   -|>
+===========================*/
+.globalTitles{
+    position: relative;
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: capitalize;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    color: #1c73e4;
+}
+
+.globalTitles::after{
+    content: '🐾';
+    position: absolute;
+    width: 10%;
+    height: 5px;
+    font-size: 30px;
+    line-height: 5px;
+    left: 45%;
+    bottom: 0;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    background: rgba(34, 34, 34, .6);
+}
+
+/*====================================================================
+<|-Styles For Responsive Design                                    -|>
+====================================================================*/
+/*====================================================================
+<|-Small desktop or vertical tablet (SM we review at 768px)        -|>
+====================================================================*/
+@media screen and (max-width: 980px){
+    /*<|-Global Titles Styles Responsive-|>*/
+    .globalTitles::after{
+        width: 30%;
+        left: 35%;
+    }
+}
+/*====================================================================
+<|-Mobile (XS we review in 320px)                                  -|>
+====================================================================*/
+@media screen and (max-width: 600px){
+    /*<|-Global Titles Styles Responsive-|>*/
+    .globalTitles{
+        font-size: 40px;
+    }
+
+    .globalTitles::after{
+        width: 60%;
+        left: 20%;
+    }
+}

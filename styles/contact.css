@@ -1,0 +1,298 @@
+/*===========================
+<|-Contact Styles         -|>
+===========================*/
+.contact {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.contact .ContainerMainContact {
+    display: flex;
+    position: relative;
+    width: 90%;
+    min-height: 550px;
+    flex-wrap: wrap;
+    left: 5%;
+    z-index: 10;
+}
+
+/*===========================
+<|-Contact Information Styles-|>
+===========================*/
+
+.contact .ContainerMainContact .contactInformation {
+    display: flex;
+    position: absolute;
+    width: 350px;
+    height: calc(100% -80px);
+    padding: 40px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    justify-content: space-between;
+    top: 40px;
+    background: #1c73e4;
+    z-index: 1;
+}
+
+.contact .ContainerMainContact .contactInformation h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact .ContainerMainContact .contactInformation .information {
+    position: relative;
+    margin: 20px 0;
+}
+
+.contact .ContainerMainContact .contactInformation .information li {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    margin: 20px 0;
+    align-items: flex-start;
+}
+
+.contact .ContainerMainContact .contactInformation .information li span:nth-child(1) {
+    width: 30px;
+    min-width: 30px;
+}
+
+.contact .ContainerMainContact .contactInformation .information li span:nth-child(1) img {
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+.contact .ContainerMainContact .contactInformation .information li span:nth-child(2) {
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.contact .ContainerMainContact .contactInformation .information li:hover span:nth-child(1) img,
+.contact .ContainerMainContact .contactInformation .information li:hover span:nth-child(2) {
+    opacity: 1;
+}
+
+.contact .ContainerMainContact .contactInformation .information li a {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 15px;
+    background: #fff;
+    color: #1c73e4;
+    transition: .3s all ease-in-out;
+}
+
+.contact .ContainerMainContact .contactInformation .information li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: .3s all ease-in-out;
+}
+
+.contact .ContainerMainContact .contactInformation .information li a:hover {
+    transform: scale(1.1);
+    font-size: 16px;
+}
+
+.contact .ContainerMainContact .contactInformation .information li a:hover::before {
+    box-shadow: inset -4px -4px 20px 0 #fff,
+                inset 4px 4px 20px 0 rgba(0, 0, 0, .8);
+}
+
+.alertLocation {
+    font-size: 50px;
+    text-transform: capitalize; 
+    color: #1c73e4;
+}
+
+.contact .ContainerMainContact .contactInformation .socialNetworksContact {
+    position: relative;
+    display: flex;
+}
+
+.contact .ContainerMainContact .contactInformation .socialNetworksContact li {
+    margin-right: 25px;
+}
+
+.contact .ContainerMainContact .contactInformation .socialNetworksContact li a {
+    font-size: 25px;
+    color: #fff;
+    opacity: .5;
+}
+
+.contact .ContainerMainContact .contactInformation .socialNetworksContact li:hover a {
+    opacity: 1;
+}
+
+/*===========================
+<|-Contact Form Styles    -|>
+===========================*/
+.contact .ContainerMainContact .contactForm {
+    position: absolute;
+    padding: 70px 50px;
+    width: 90%;
+    height: 100%;
+    background: #f2f2f2;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+    margin-left: 100px;
+    padding-left: 300px;
+}
+
+.contact .ContainerMainContact .contactForm h2 {
+    font-weight: 24px;
+    font-weight: 500;
+    color: #1c73e4;
+}
+
+.contact .ContainerMainContact .contactForm .formBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.contact .ContainerMainContact .contactForm .formBox .inputBox {
+    position: relative;
+    margin: 0 0 35px 0;
+}
+
+.contact .ContainerMainContact .contactForm .formBox .inputBox.w50 {
+    width: 47%;
+}
+
+.contact .ContainerMainContact .contactForm .formBox .inputBox.w100 {
+    width: 100%;
+}
+
+.contact .ContainerMainContact .contactForm .formBox .inputBox input,
+.contact .ContainerMainContact .contactForm .formBox .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    background: transparent;
+    resize: none;
+    color: #333033;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #1c73e4;
+}
+
+.contact .ContainerMainContact .contactForm .formBox .inputBox textarea {
+    min-height: 120px;
+}
+
+.contact .ContainerMainContact .contactForm .formBox .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.contact .ContainerMainContact .contactForm .formBox .inputBox input:focus ~ span,
+.contact .ContainerMainContact .contactForm .formBox .inputBox textarea:focus ~ span,
+.contact .ContainerMainContact .contactForm .formBox .inputBox input:valid ~ span,
+.contact .ContainerMainContact .contactForm .formBox .inputBox textarea:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #1c73e4;
+}
+
+.contact .ContainerMainContact .contactForm .formBox .inputBox input[type="submit"] {
+    cursor: pointer;
+    position: relative;
+    max-width: 30%;
+    padding: 10px 0;
+    border-radius: 15px;
+    background: #1c73e4;
+    color: #fff;
+    transition: .5s all ease-in-out;
+}
+
+.contact .ContainerMainContact .contactForm .formBox .inputBox input[type="submit"]:hover {
+    opacity: .7;
+}
+
+/*====================================================================
+<|-Styles For Responsive Design                                    -|>
+====================================================================*/
+/*====================================================================
+<|-Small desktop or vertical tablet (SM we review at 768px)        -|>
+====================================================================*/
+@media screen and (max-width: 980px){
+    .contact .ContainerMainContact .contactInformation h2 {
+        text-align: center;
+    }
+
+    .contact .ContainerMainContact .contactInformation {
+        width: 100%;
+        height: calc(100% -80px);
+    }
+
+    .contact .ContainerMainContact .contactInformation .socialNetworksContact {
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .contact .ContainerMainContact .contactInformation .socialNetworksContact li {
+        margin-right: 0px;
+    }
+
+    .contact .ContainerMainContact .contactForm {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        padding-left: 50px;
+        z-index: 1;
+        top: 90%;
+    }
+}
+/*====================================================================
+<|-Mobile (XS we review in 320px)                                  -|>
+====================================================================*/
+@media screen and (max-width: 600px){
+    .contact .ContainerMainContact .contactInformation .information {
+        width: 100%;
+        padding: 0 30px;
+    }
+    
+    .contact .ContainerMainContact .contactForm .formBox .inputBox.w50 {
+        width: 100%;
+    }
+
+    .contact .ContainerMainContact .contactInformation h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .contact .ContainerMainContact .contactForm h2 {
+        font-size: 18px;
+    }
+
+    .alertLocation {
+        font-size: 20px;
+    }
+
+}

@@ -1,0 +1,109 @@
+/*===========================
+<|-Adopt Styles           -|>
+===========================*/
+.adopt {
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.adopt .imageContainer {
+    display:flex;
+    width: 85%;
+    margin: auto;
+    margin-top: 80px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.adopt .imageContainer .imagen {
+    position: relative;
+    width: 32%;
+    height:250px;
+    border-radius: 15px;
+    margin-bottom:  25px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.adopt .imageContainer .imagen img {
+    width: 100%;
+    height:100%;
+    transition: .5s all ease-in-out;
+}
+
+.adopt .imageContainer .imagen:hover img {
+    transform: scale(1.5 , 1.5);
+}
+
+.adopt .imageContainer .overlay {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: rgba(28, 115, 228, .5);
+    transition: .5s ease;
+}
+
+.adopt .imageContainer .overlay h3 {
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.adopt .imageContainer .imagen:hover .overlay {
+    height:100%;
+    cursor: pointer;
+}
+
+/*====================================================================
+<|-Styles For Responsive Design                                    -|>
+====================================================================*/
+/*====================================================================
+<|-Medium desktop or horizontal tablet (MD we review at 1024px)    -|>
+====================================================================*/
+@media screen and (max-width:1199px){
+    .adopt .imageContainer {
+        width: 95%;
+    }
+}
+/*====================================================================
+<|-Small desktop or vertical tablet (SM we review at 768px)        -|>
+====================================================================*/
+@media screen and (max-width: 980px){
+    .adopt {
+        margin-top: 250px;
+    }
+
+    .adopt .imageContainer {
+        width: 90%;
+    }
+    
+    .adopt .imageContainer .imagen {
+        width: 48%;
+    }
+}
+/*====================================================================
+<|-Mobile (XS we review in 320px)                                  -|>
+====================================================================*/
+@media screen and (max-width: 600px){
+    .adopt {
+        margin-top: -350px;
+    }
+
+    .adopt .imageContainer {
+        width: 98%;
+    }
+
+    .adopt .imageContainer .imagen {
+        width: 80%;
+    }
+}
+

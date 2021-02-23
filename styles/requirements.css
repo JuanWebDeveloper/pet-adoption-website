@@ -1,0 +1,161 @@
+/*===========================
+<|-Requirements Styles    -|>
+===========================*/
+.requirements {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+}
+
+.requirements .tabs {
+    position: relative;
+    width: 90%;
+    height: 360px;
+    padding: 30px 20px;
+    margin-top: 50px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    background: #f1f1f1;
+    overflow: hidden;
+}
+
+.requirements .tabs .tabHeader {
+    float: left;
+    width: 200px;
+    height: 100%;
+    padding: 50px 0;
+    border-right: 1px solid #C8CDD0;
+}
+
+.requirements .tabs .tabHeader div {
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: justify;
+    color: #222;
+    transition: all .5s ease-in-out;
+}
+
+.requirements .tabs .tabHeader div:hover,
+.requirements .tabs .tabHeader div.active {
+    color: #1c73e4;
+}
+
+.requirements .tabs .tabContent {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.requirements .tabs .tabContent div {
+    position: absolute;
+    text-align: center;
+    padding: 40px 20px;
+    top: -200%;
+    transition: all .5s ease-in-out;
+}
+
+.requirements .tabs .tabContent div.active {
+    top: 0px;
+}
+
+.requirements .tabs .tabContent div i {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background: #1c73e4;
+    color: #fff;
+}
+
+.requirements .tabs .tabContent h2 {
+    font-weight: 900;
+    text-transform: capitalize;
+    color: #1c73e4;
+}
+
+.requirements .tabs .tabContent p {
+    font-size: 17px;
+    font-weight: 600;
+    text-align: left;
+    color: #222;
+}
+
+.tabs .tabIndicator {
+    position: absolute;
+    width: 4px;
+    height: 50px;
+    left: 218px;
+    top: 80px;
+    background: #1c73e4;
+    transition: all .5s ease-in-out;
+}
+
+/*====================================================================
+<|-Styles For Responsive Design                                    -|>
+====================================================================*/
+/*====================================================================
+<|-Medium desktop or horizontal tablet (MD we review at 1024px)    -|>
+====================================================================*/
+@media screen and (max-width:1199px){
+    .requirements .tabs {
+        height: 400px;
+    }
+}
+/*====================================================================
+<|-Small desktop or vertical tablet (SM we review at 768px)        -|>
+====================================================================*/
+@media screen and (max-width: 980px){
+    .requirements .tabs {
+        height: 500px;
+        margin-top: 150px;
+    }
+}
+/*====================================================================
+<|-Mobile (XS we review in 320px)                                  -|>
+====================================================================*/
+@media screen and (max-width: 600px){
+    .requirements {
+        position: relative;
+        height: auto;
+    }
+    .requirements .tabs {
+        position: relative;
+        display: grid;
+        height: auto;
+        grid-template-rows: 100px 700px;
+        margin-top: 500px;
+    }
+
+    .requirements .tabs .tabHeader {
+        border-right: none;
+        z-index: 10;
+    }
+    
+    .requirements .tabs .tabContent div {
+        top: -400%;
+    }
+
+    .requirements .tabs .tabContent div.active {
+        top: 120px;
+    }
+
+    .requirements .tabs .tabContent div p {
+        font-size: 15px;
+    }
+    
+    .tabs .tabIndicator {
+        display: none;
+    }
+}
