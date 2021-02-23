@@ -48,7 +48,7 @@ window.addEventListener("scroll", function(){
 =====================================================*/
 window.onscroll = function() {
     /*<|-Fixed-|>*/
-    if (window.scrollY >= 0) {
+    if (window.scrollY >= 40) {
         fixedNavbar.classList.add('navFixed');
         $('header nav ul li a').addClass('textFixed');
     }else {
